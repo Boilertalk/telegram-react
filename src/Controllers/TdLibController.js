@@ -16,7 +16,7 @@ import {
     WASM_FILE_HASH,
     WASM_FILE_NAME
 } from '../Constants';
-import TdClient from '@arseny30/tdweb/dist/tdweb';
+import TdClient from 'tdweb/dist/tdweb';
 
 function databaseExists(dbname, callback) {
     var req = indexedDB.open(dbname);
@@ -175,8 +175,8 @@ class TdLibController extends EventEmitter {
     };
 
     sendTdParameters = async () => {
-        const apiId = process.env.REACT_APP_TELEGRAM_API_ID;
-        const apiHash = process.env.REACT_APP_TELEGRAM_API_HASH;
+        const apiId = '1158338';
+        const apiHash = '16cbc28dbc40ab0a42e00f8e1dcfb19c';
 
         if (!apiId || !apiHash) {
             if (
